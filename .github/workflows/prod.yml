@@ -17,6 +17,6 @@ jobs:
       - run: "npm i"
       - run: "npm run test"
       - run: npm install -g clever-tools
-      - run: "git pull origin master --unshallow"
+      - run: "git pull origin main --unshallow"
       - run: clever login --token ${{ secrets.CLEVER_TOKEN }} --secret ${{ secrets.CLEVER_SECRET }}
       - run: clever deploy -f
