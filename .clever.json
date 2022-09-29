@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_588f43e8-1b0b-4c78-a81a-73c25e0f9e2d",
+      "org_id": "orga_daef669e-3ba2-4acb-a921-f15b423296ad",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_588f43e8-1b0b-4c78-a81a-73c25e0f9e2d.git",
+      "name": "LeCoinBon-node-dev",
+      "alias": "LeCoinBon-node-dev"
+    }
+  ]
+}
