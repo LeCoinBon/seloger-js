@@ -1,6 +1,6 @@
 class Housing {
 
-    constructor(title, city, zipcode, area, rooms, level, price) {
+    constructor(title, city, zipcode, area, rooms, level, price, photo) {
         this.title = title;
         this.city = city;
         this.zipcode = zipcode;
@@ -8,6 +8,7 @@ class Housing {
         this.rooms = rooms;
         this.level = level;
         this.price = price;
+        this.photo = photo
     };
 
 }

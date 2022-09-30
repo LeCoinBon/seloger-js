@@ -36,12 +36,22 @@ class MySQLConnection {
         area INT,
         rooms INT NOT NULL,
         level INT,
-        price INT NOT NULL
+        price INT NOT NULL,
+        photo VARCHAR(255)
       )`, function (error, results, fields) {
       this.tables = results
       if (error) throw error;
       console.log(error);
     });
+  };
+
+  drop_table(table_name){
+    this.connection.query(`DROP TABLE ${table_name}`, function (error, results, fields) {
+      this.tables = this.get_tables();
+      if (error) throw error; {
+        console.log(error);
+      }
+    })
   };
   
   async get_content(table_name) {
@@ -54,8 +64,8 @@ class MySQLConnection {
   };
 
   insert_content(table, object) {
-    this.connection.query(`INSERT INTO ${table} (title, city, zipcode, area, rooms, level, price)
-                            VALUES('${object.title}', '${object.city}', '${object.zipcode}', ${object.area}, ${object.rooms}, ${object.level}, ${object.price})`, function (error, results, fields) {
+    this.connection.query(`INSERT INTO ${table} (title, city, zipcode, area, rooms, level, price, photo)
+                            VALUES('${object.title}', '${object.city}', '${object.zipcode}', ${object.area}, ${object.rooms}, ${object.level}, ${object.price}, '${object.photo}')`, function (error, results, fields) {
       if (error) throw error;
       console.log(error);
     });

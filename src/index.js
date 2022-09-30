@@ -20,7 +20,7 @@ app.get('/', async(req, res) => {
 
   // Push data as Objects to the database
   data.items.forEach(element => {
-    advert = new Housing(element.title, element.city, element.zipCode, element.livingArea, element.rooms, element.level, element.price);
+    advert = new Housing(element.title, element.city, element.zipCode, element.livingArea, element.rooms, element.level, element.price, element.photos[0]);
     connector.insert_content(table_name, advert)
   });
 
